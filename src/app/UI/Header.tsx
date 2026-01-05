@@ -2,51 +2,53 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useTheme } from "../store/useThemeStore"; 
+import { useTheme } from "../store/useThemeStore";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
 
-  // مقداردهی اولیه theme
   useEffect(() => {
-    // چک کردن localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || savedTheme === 'light') {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark" || savedTheme === "light") {
       setTheme(savedTheme);
     } else {
-      // چک کردن preference سیستم
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setTheme(prefersDark ? "dark" : "light");
     }
   }, [setTheme]);
 
-  // اعمال theme به html element
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
-    <div className={`min-h-screen transition-colors ${
-      theme === 'dark' ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-    }`}>
+    <div
+      className={`min-h-screen transition-colors ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+      }`}
+    >
       <div className="flex flex-row justify-between items-center p-4 md:p-8">
         <div
           className={`w-8 h-8 rounded hover:-rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer ${
-            theme === 'dark' ? "bg-white" : "bg-black"
+            theme === "dark" ? "bg-white" : "bg-black"
           }`}
         >
           <div
-            className={`text-center ${theme === 'dark' ? "text-black" : "text-white"}`}
+            className={`text-center ${
+              theme === "dark" ? "text-black" : "text-white"
+            }`}
           >
             M
           </div>
@@ -54,7 +56,7 @@ const Header = () => {
 
         <div className="flex flex-row gap-2">
           <button onClick={toggleTheme} className="p-2">
-            {theme === 'dark' ? (
+            {theme === "dark" ? (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
@@ -69,7 +71,7 @@ const Header = () => {
             )}
           </button>
           <button>
-            {theme === 'dark' ? (
+            {theme === "dark" ? (
               <svg
                 className="text-white h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"

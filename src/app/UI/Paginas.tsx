@@ -15,11 +15,11 @@ const Pages = () => {
           <p className="text-gray-600 dark:text-gray-300">Projects</p>
         </div>
         <div className="bg-gray-200 dark:bg-gray-800 w-full rounded-2xl p-4 hover:scale-[1.02] transition-transform duration-300">
-          <h3 className="font-medium text-xl md:text-2xl dark:text-white">Blog</h3>
+          <h3 className="font-medium text-xl md:text-2xl dark:text-white">Spotify Playlist</h3>
           <p className="text-gray-600 dark:text-gray-300">Lees wat ik met de wereld deel</p>
         </div>
         <div className="bg-gray-200 dark:bg-gray-800 w-full rounded-2xl p-4 hover:scale-[1.02] transition-transform duration-300">
-          <h3 className="font-medium text-xl md:text-2xl dark:text-white">Blog</h3>
+          <h3 className="font-medium text-xl md:text-2xl dark:text-white">Let's Talk</h3>
           <p className="text-gray-600 dark:text-gray-300">Lees wat ik met de wereld deel</p>
         </div>
       </div>

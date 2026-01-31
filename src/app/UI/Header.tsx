@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTheme } from "../store/useThemeStore";
 import Modal from "./Modal";
+import Link from "next/link";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -14,11 +15,14 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="transition-colors bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className=" transition-colors bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
       <div className="flex flex-row justify-between items-center p-4 md:p-8">
-        <div className="w-8 h-8 rounded hover:-rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer bg-black dark:bg-white">
+        <Link
+          href={"/"}
+          className="w-8 h-8 rounded hover:-rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer bg-black dark:bg-white"
+        >
           <div className="text-center text-white dark:text-black">M</div>
-        </div>
+        </Link>
 
         <div className="flex flex-row gap-2">
           <button onClick={toggleTheme} className="p-2">

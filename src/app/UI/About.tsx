@@ -7,7 +7,7 @@ const About = () => {
  
 
   return (
-    <div className="transition-colors bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="light-grid transition-colors bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">
      
 
       <div className="p-4 md:p-6 flex flex-col lg:flex-row justify-between items-center lg:items-start">

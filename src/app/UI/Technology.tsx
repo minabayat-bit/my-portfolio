@@ -1,12 +1,12 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Technology = () => {
   return (
-    <div className=" dark:bg-gray-900 text-gray-800 dark:text-white p-8">
+    <div className=" dark:bg-gray-900 bg-gray-50 text-gray-800 dark:text-white p-8">
       <h2 className="text-xl md:text-2xl font-bold dark:text-white pb-4">
         Technology
       </h2>
-      <div className="h-0.5 bg-gray-300 dark:bg-gray-700 "></div>
+      <div className="h-0.5 bg-gray-300 dark:bg-gray-700 mb-4"></div>
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">Backend</h2>
@@ -79,6 +79,27 @@ const Technology = () => {
             </svg>
             <span>React</span>
           </div>
+          <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 p-4 rounded shadow">
+            <img className="w-6" src={"/pwa.png"} alt="" />
+            <span>PWA</span>
+          </div>
+          <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 p-4 rounded shadow">
+            <img className="w-6" src={"/framermotion.png"} alt="" />
+            <span>Framer Motion</span>
+          </div>
+          <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 p-4 rounded shadow">
+            <img className="w-6" src={"/redux.png"} alt="" />
+            <span>Redux</span>
+          </div>
+          <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 p-4 rounded shadow">
+            <img className="w-6" src={"/zustand.jfif"} alt="" />
+            <span>Zustand</span>
+          </div>
+          <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 p-4 rounded shadow">
+            <img className="w-6" src={"/query.png"} alt="" />
+            <span>React Query</span>
+          </div>
+
           <div className="flex items-center gap-3 bg-gray-200 dark:bg-gray-800 p-4 rounded shadow">
             <svg
               viewBox="0 0 24 24"

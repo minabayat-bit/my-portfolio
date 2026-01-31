@@ -74,6 +74,26 @@ const MyProjects = () => {
             View Project →
           </button>
         </div>
+         <div
+          className="flex flex-col gap-2.5 bg-white/50 dark:bg-black/50 p-4 md:p-8 rounded-3xl 
+        transition-transform duration-300 hover:scale-105"
+        >
+          <img
+            className="w-full max-w-130 rounded-3xl"
+            src="/cars.png"
+            alt=""
+          />
+          <h2 className="text-sm font-medium md:text-2xl dark:text-white">
+            Rent Cars Project
+          </h2>
+         
+          <button
+            className="mt-4 self-start px-4 py-2 text-sm rounded-xl 
+            bg-gray-600 text-white hover:bg-gray-700 transition"
+          >
+            View Project →
+          </button>
+        </div>
       </div>
     </div>
   );

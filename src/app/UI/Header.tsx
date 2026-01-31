@@ -21,12 +21,11 @@ const Header = () => {
           href={"/"}
           className="w-8 h-8 rounded hover:-rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer bg-black dark:bg-white"
         >
-          <div className="text-center text-white dark:text-black">M</div>
+          <div className="text-center pt-1 text-white dark:text-black">M</div>
         </Link>
 
         <div className="flex flex-row gap-2">
           <button onClick={toggleTheme} className="p-2">
-            {/* Sun icon (shown in dark mode) */}
             <svg
               className="w-6 h-6 hidden dark:block"
               fill="currentColor"
@@ -39,7 +38,6 @@ const Header = () => {
               />
             </svg>
 
-            {/* Moon icon (shown in light mode) */}
             <svg
               className="w-6 h-6 block dark:hidden"
               fill="currentColor"

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useTheme } from "../store/useThemeStore";
 import Modal from "./Modal";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -13,6 +15,12 @@ const Header = () => {
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsModalOpen(false);
+  }, [pathname]);
 
   return (
     <div className=" transition-colors bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white">

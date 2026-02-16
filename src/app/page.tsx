@@ -9,7 +9,7 @@ export default function Home() {
     <div className="">
       <About />
       <Pages />
-      <Technology />
+      
     </div>
   );
 }
